@@ -31,7 +31,7 @@ type AdmonitionRenderer struct {
 func (r *AdmonitionRenderer) check(n *bf.Node) bool {
 	matches := r.re.FindSubmatch(n.Literal)
 	remain := bytes.SplitN(n.Literal, []byte{'\n'}, 2)
-	return matches != nil && len(remain) == 2
+	return matches == nil || len(remain) != 2
 }
 
 // RenderNode will render the node and try to find admonitions

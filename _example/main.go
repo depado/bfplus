@@ -5,7 +5,7 @@ import (
 
 	bfp "github.com/Depado/bfplus"
 	"github.com/alecthomas/chroma/formatters/html"
-	bf "gopkg.in/russross/blackfriday.v2"
+	bf "github.com/russross/blackfriday/v2"
 )
 
 var exts = bf.NoIntraEmphasis | bf.Tables | bf.FencedCode | bf.Autolink |
@@ -50,7 +50,7 @@ func main() {
 		bfp.WithCodeHighlighting(
 			bfp.Style("monokai"),
 			bfp.WithoutAutodetect(),
-			bfp.ChromaOptions(html.WithClasses()),
+			bfp.ChromaOptions(html.WithClasses(true)),
 		),
 		bfp.WithHeadingAnchors(),
 		bfp.Extend(bf.NewHTMLRenderer(bf.HTMLRendererParameters{Flags: flags})),

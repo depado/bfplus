@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	bf "github.com/russross/blackfriday/v2"
+	bf "gopkg.in/russross/blackfriday.v2"
 )
 
 // WithHeadingAnchors enables anchor insertion for headings

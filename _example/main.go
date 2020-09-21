@@ -5,7 +5,7 @@ import (
 
 	bfp "github.com/Depado/bfplus"
 	"github.com/alecthomas/chroma/formatters/html"
-	bf "github.com/russross/blackfriday/v2"
+	bf "gopkg.in/russross/blackfriday.v2"
 )
 
 var exts = bf.NoIntraEmphasis | bf.Tables | bf.FencedCode | bf.Autolink |

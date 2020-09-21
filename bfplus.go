@@ -3,7 +3,7 @@ package bfplus
 import (
 	"io"
 
-	bf "github.com/russross/blackfriday/v2"
+	bf "gopkg.in/russross/blackfriday.v2"
 )
 
 // Renderer extends a base renderer, allowing to add a custom anchor

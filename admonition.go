@@ -13,10 +13,9 @@ import (
 func WithAdmonition() Option {
 	return func(r *Renderer) {
 		r.Admonition = &AdmonitionRenderer{
-			re: regexp.MustCompile(`^!!!\s?([\w]+(?: +[\w]+)*)(?: +"(.*?)")? *\n`),
+			re: regexp.MustCompile(`^!!!\s?(\w+(?: +\w+)*)(?: +"(.*?)")? *\n`),
 		}
 	}
-
 }
 
 // AdmonitionRenderer is a custom Blackfriday renderer that attempts to find admonition
@@ -35,6 +34,7 @@ func (r *AdmonitionRenderer) check(n *bf.Node) bool {
 }
 
 // RenderNode will render the node and try to find admonitions
+//nolint:errcheck,gosec
 func (r *AdmonitionRenderer) RenderNode(w io.Writer, node *bf.Node, entering bool, base bf.Renderer) bf.WalkStatus {
 	// First we check if we enter a paragraph. If so, we check if the first child
 	// matches with our regex so we don't generate an extra useless <p> tag

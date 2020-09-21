@@ -6,7 +6,7 @@ import (
 	"io"
 	"regexp"
 
-	bf "gopkg.in/russross/blackfriday.v2"
+	bf "github.com/russross/blackfriday/v2"
 )
 
 // WithAdmonition enables admonition support

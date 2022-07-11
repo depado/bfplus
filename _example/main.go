@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	bfp "github.com/Depado/bfplus"
-	"github.com/alecthomas/chroma/formatters/html"
+	"github.com/alecthomas/chroma/v2/formatters/html"
 	bf "github.com/russross/blackfriday/v2"
 )
 
@@ -40,7 +40,7 @@ import "fmt"
 fmt.Println("Hello World")
 ` + "```" + `
 
-Let's go back to non-admonition markdown now. 
+Let's go back to non-admonition markdown now.
 **And see if that works properly.**
 `
 

@@ -14,7 +14,7 @@ import (
 func WithCodeHighlighting(options ...CodeOption) Option {
 	return func(r *Renderer) {
 		r.Highlighter = &CodeRenderer{
-			Style:      styles.Monokai,
+			Style:      styles.Get("monokai"),
 			Autodetect: true,
 		}
 		for _, option := range options {

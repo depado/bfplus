@@ -3,7 +3,7 @@ module github.com/Depado/bfplus
 go 1.20
 
 require (
-	github.com/alecthomas/chroma/v2 v2.11.1
+	github.com/alecthomas/chroma/v2 v2.12.0
 	github.com/russross/blackfriday/v2 v2.1.0
 )
 

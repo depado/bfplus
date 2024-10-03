@@ -7,4 +7,4 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0
 )
 
-require github.com/dlclark/regexp2 v1.11.0 // indirect
+require github.com/dlclark/regexp2 v1.11.4 // indirect

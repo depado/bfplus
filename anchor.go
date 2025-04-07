@@ -63,11 +63,12 @@ func Content(s string) AnchorOption {
 // when rendering markdown. Note that the AnchorRenderer itself doesn't
 // implement all the methods required to be considered a true renderer. This is
 // by design.
+//
 //nolint:errcheck,gosec
 func (a *AnchorRenderer) RenderNode(w io.Writer, node *bf.Node, entering bool) {
 	if !entering {
-		w.Write([]byte(
-			fmt.Sprintf(
+		w.Write(
+			fmt.Appendf(nil,
 				` <a id="%s%s" class="%s" href="#%s">%s</a>`,
 				a.IDPrefix,
 				node.HeadingID,
@@ -75,6 +76,6 @@ func (a *AnchorRenderer) RenderNode(w io.Writer, node *bf.Node, entering bool) {
 				node.HeadingID,
 				a.Content,
 			),
-		))
+		)
 	}
 }

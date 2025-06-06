@@ -2,7 +2,7 @@ module github.com/Depado/bfplus
 
 go 1.22
 
-toolchain go1.24.3
+toolchain go1.24.4
 
 require (
 	github.com/alecthomas/chroma/v2 v2.18.0

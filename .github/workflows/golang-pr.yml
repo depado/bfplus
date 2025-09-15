@@ -1,13 +1,12 @@
-name: golang-push
+name: golang-pr
 
 on:
-  push:
-    branches: [main]
+  pull_request:
 
 jobs:
   golang:
     permissions:
-      contents: write
+      contents: read
       pull-requests: write
       checks: write
     uses: depado/github-actions/.github/workflows/golang.yml@main

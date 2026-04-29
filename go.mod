@@ -5,8 +5,8 @@ go 1.22
 toolchain go1.26.2
 
 require (
-	github.com/alecthomas/chroma/v2 v2.23.1
+	github.com/alecthomas/chroma/v2 v2.24.0
 	github.com/russross/blackfriday/v2 v2.1.0
 )
 
-require github.com/dlclark/regexp2 v1.11.5 // indirect
+require github.com/dlclark/regexp2 v1.12.0 // indirect
